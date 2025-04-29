@@ -38,7 +38,7 @@ with st.sidebar:
     """)
 
 st.title("For My Wife 💝")
-st.write("Your AI-powered research assistant for informed decision-making")
+st.write("AI researchers helping you making informed decisions on any topic")
 
 # Input section
 topic = st.text_input("Enter a debate topic:", "Should I follow the keto diet?")
