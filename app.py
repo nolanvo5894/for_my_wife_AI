@@ -8,7 +8,7 @@ from debate_illustrator import generate_debate_illustration
 # Configure page
 st.set_page_config(
     page_title="For My Wife",
-    page_icon="💝",
+    page_icon="👩💚",
     menu_items={
         'About': "For My Wife: Multi-agentic research system that helps my wife (and anyone else) gain multifaceted insights and make informed decisions on any problem."
     }
@@ -17,7 +17,7 @@ st.set_page_config(
 # Add instructions to sidebar
 with st.sidebar:
     st.markdown("""
-    # For My Wife 💝
+    # For My Wife 👩💚
     ### How it works
     1. Enter any topic you need to research for decision-making
     2. The system will:
@@ -37,12 +37,15 @@ with st.sidebar:
        - Audio recording in WAV format
     """)
 
-st.title("For My Wife 💝")
+st.title("For My Wife 👩💚")
 st.write("AI researchers fight to help my wife (and you) making informed decisions on any topic")
+st.markdown("My wife takes a long time before making any life decisions, whether it is to try on new diet or to get a new pair of shoes. Thorough research is a must and hasty impulsive purchases are not tolerated. I know she is not alone.")
+st.markdown('''**For My Wife** is a multi-agentic research system designed to help my wife (or anyone else) gain multifaceted insights and make informed decisions on any topic. The app uses AI to generate comprehensive debates between AI researchers, providing balanced perspectives on any subject matter. This debate format is intended to deliver the researched insights in an engaging and memorable manner to people who enjoy watching dramas like my wife (I mean the users).''')
+# Input section
 
 # Input section
-topic = st.text_input("Enter a Research Topic for Debate:", "Should I follow the keto diet?")
-generate_button = st.button("Fight!!!", use_container_width=True)
+topic = st.text_input("🔍 Enter a Research Topic for Debate:", "Should I follow the keto diet?")
+generate_button = st.button("Fight!!! 🥊", use_container_width=True)
 
 # Create status containers
 status_area = st.empty()
@@ -93,27 +96,27 @@ if generate_button:
         
         # Display results in tabs
         with tabs_placeholder.container():
-            tab1, tab2, tab3 = st.tabs(["For Stance", "Against Stance", "Podcast"])
+            tab1, tab2, tab3 = st.tabs(["👍 For Stance", "👎 Against Stance", "🎧 Podcast"])
             
             with tab1:
                 st.markdown(result["for"]["essay"])
-                st.markdown("## References")
+                st.markdown("## 📚 References")
                 for i, url in enumerate(result["for"]["references"], 1):
                     st.markdown(f"{i}. {url}")
                     
             with tab2:
                 st.markdown(result["against"]["essay"])
-                st.markdown("## References")
+                st.markdown("## 📚 References")
                 for i, url in enumerate(result["against"]["references"], 1):
                     st.markdown(f"{i}. {url}")
             
             with tab3:
-                st.markdown("## Podcast Audio")
+                st.markdown("## 🎧 Podcast Audio")
                 with open(audio_path, "rb") as f:
                     audio_bytes = f.read()
                 st.audio(audio_bytes, format="audio/wav")
                 
-                st.markdown("## Podcast Script")
+                st.markdown("## 📜 Podcast Script")
                 for entry in script_data["dialogue"]:
                     st.markdown(f"**[{entry['role']}]**: {entry['text']}")
                 
@@ -121,7 +124,7 @@ if generate_button:
                 col1, col2, col3 = st.columns(3)
                 with col1:
                     st.download_button(
-                        label="Download Script (JSON)",
+                        label="📄 Download Script (JSON)",
                         data=script_data["dialogue"].__str__(),
                         file_name=f"{topic.replace(' ', '_').lower()}_podcast_script.json",
                         mime="application/json"
@@ -129,7 +132,7 @@ if generate_button:
                 with col2:
                     with open(audio_path, "rb") as f:
                         st.download_button(
-                            label="Download Audio (WAV)",
+                            label="🎵 Download Audio (WAV)",
                             data=f,
                             file_name=f"{topic.replace(' ', '_').lower()}_podcast.wav",
                             mime="audio/wav"
@@ -137,7 +140,7 @@ if generate_button:
                 with col3:
                     with open(illustration_path, "rb") as f:
                         st.download_button(
-                            label="Download Illustration (PNG)",
+                            label="🖼️ Download Illustration (PNG)",
                             data=f,
                             file_name=f"{topic.replace(' ', '_').lower()}_illustration.png",
                             mime="image/png"
