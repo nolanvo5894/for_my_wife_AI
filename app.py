@@ -16,26 +16,31 @@ st.set_page_config(
 
 # Add instructions to sidebar
 with st.sidebar:
-    st.markdown("""
-    # For My Wife 👩💚
-    ### How it works
-    1. Enter any topic you need to research for decision-making
-    2. The system will:
-       - Analyze the topic and identify clear opposing stances
-       - Generate a custom illustration of the debate scene
-       - Perform targeted research for each stance
-       - Generate well-structured essays supporting each position
-       - Create a podcast script with a moderator and two debaters
-       - Generate audio using different voices for each speaker
-    3. View the results in the tabs above:
-       - For Stance: Essay supporting the position
-       - Against Stance: Essay opposing the position
-       - Podcast: Interactive script and audio recording
-    4. Download options:
-       - Debate illustration
-       - Podcast script in JSON format
-       - Audio recording in WAV format
-    """)
+    st.markdown("# For My Wife 👩💚")
+    
+    # Add the wife_thinking.png image to the sidebar
+    st.image("wife_thinking.png", caption="My wife thinking about decisions", use_column_width=True)
+    
+    # Put the "How it works" section inside a toggle
+    with st.expander("ℹ️ How it works", expanded=False):
+        st.markdown("""
+        1. Enter any topic you need to research for decision-making
+        2. The system will:
+           - Analyze the topic and identify clear opposing stances
+           - Generate a custom illustration of the debate scene
+           - Perform targeted research for each stance
+           - Generate well-structured essays supporting each position
+           - Create a podcast script with a moderator and two debaters
+           - Generate audio using different voices for each speaker
+        3. View the results in the tabs above:
+           - For Stance: Essay supporting the position
+           - Against Stance: Essay opposing the position
+           - Podcast: Interactive script and audio recording
+        4. Download options:
+           - Debate illustration
+           - Podcast script in JSON format
+           - Audio recording in WAV format
+        """)
 
 st.title("For My Wife 👩💚")
 st.write("### 🤖🧑‍🔬️ AI researchers fight to help my wife (and you) making informed decisions on any topic")
