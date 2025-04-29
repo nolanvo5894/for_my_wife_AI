@@ -8,6 +8,29 @@ My wife takes a long time before making any life decisions, whether it is to try
 
 This project was created to save time on research when making decisions, offering a comprehensive understanding of topics through deep research, structured debates, visual illustrations, and audio presentations.
 
+## System Architecture
+
+![System Architecture Diagram](for_my_wife_diagram.png)
+
+The application follows a multi-agent architecture where different AI agents collaborate to create a comprehensive research and debate experience:
+
+1. **Research Flow**:
+   - The process begins with a debate topic input
+   - A top research agent performs high-level web research to gather general materials
+   - The materials are then distributed to two specialized research agents:
+     - FOR stance research agent with its own detailed web research
+     - AGAINST stance research agent with its own detailed web research
+   - Both agents contribute to creating the debate content
+
+2. **Content Generation Flow**:
+   - The debate content feeds into two parallel processes:
+     - **Visual Track**: An illustrator agent creates a custom illustration for the debate
+     - **Audio Track**: 
+       - A writer agent creates structured debate scripts
+       - Voice agents convert the scripts into audio using different voices for each role
+
+This architecture ensures that each aspect of the debate (research, visuals, and audio) is handled by specialized agents, resulting in high-quality, well-researched, and engaging content.
+
 ## Features
 
 - **Comprehensive Research**: Analyzes topics and identifies diverse, opposing perspectives for deep research
