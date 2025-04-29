@@ -1,5 +1,7 @@
 # For My Wife 💝
 
+🔗 **Try it out**: [https://formywife.streamlit.app/](https://formywife.streamlit.app/)
+
 ## Overview
 
 My wife takes a long time before making any life decisions, whether it is to try on new diet or to get a new pair of shoes. Thorough research is a must and hasty impulsive purchases are not tolerated. I know she is not alone.
