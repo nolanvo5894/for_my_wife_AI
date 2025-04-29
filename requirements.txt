@@ -1,0 +1,11 @@
+streamlit
+openai
+python-dotenv
+tavily-python
+llama-index-core
+llama-index-llms-azure-openai
+pydantic
+azure-cognitiveservices-speech
+requests
+pillow
+tenacity 
