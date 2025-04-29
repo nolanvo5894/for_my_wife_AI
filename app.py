@@ -38,10 +38,10 @@ with st.sidebar:
     """)
 
 st.title("For My Wife 💝")
-st.write("AI researchers helping you making informed decisions on any topic")
+st.write("AI researchers helping my wife (and you) making informed decisions on any topic")
 
 # Input section
-topic = st.text_input("Enter a debate topic:", "Should I follow the keto diet?")
+topic = st.text_input("Enter a Research Topic for Debate:", "Should I follow the keto diet?")
 generate_button = st.button("Fight!!!", use_container_width=True)
 
 # Create status containers
