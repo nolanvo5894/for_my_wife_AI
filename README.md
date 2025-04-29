@@ -8,6 +8,15 @@ My wife takes a long time before making any life decisions, whether it is to try
 
 This project was created to save time on research when making decisions, offering a comprehensive understanding of topics through deep research, structured debates, visual illustrations, and audio presentations.
 
+## Features
+
+- **Comprehensive Research**: Analyzes topics and identifies diverse, opposing perspectives for deep research
+- **Visual Debates**: Generates custom illustrations
+- **Structured Essays**: Creates well-researched essays supporting each position
+- **Interactive Podcasts**: Produces debate scripts with a moderator and two debaters.
+- **Audio Generation**: Converts scripts to audio using different voices for each speaker
+- **Downloadable Content**: Save illustrations, scripts, and audio recordings
+
 ## System Architecture
 
 ![System Architecture Diagram](for_my_wife_diagram.png)
@@ -30,19 +39,6 @@ The application follows a multi-agent architecture where different AI agents col
        - Voice agents convert the scripts into audio using different voices for each role
 
 This architecture ensures that each aspect of the debate (research, visuals, and audio) is handled by specialized agents, resulting in high-quality, well-researched, and engaging content.
-
-## Features
-
-- **Comprehensive Research**: Analyzes topics and identifies diverse, opposing perspectives for deep research
-- **Visual Debates**: Generates custom illustrations
-- **Structured Essays**: Creates well-researched essays supporting each position
-- **Interactive Podcasts**: Produces debate scripts with a moderator and two debaters.
-- **Audio Generation**: Converts scripts to audio using different voices for each speaker
-- **Downloadable Content**: Save illustrations, scripts, and audio recordings
-
-## Screenshots
-
-![App Screenshot](screenshots/app_screenshot.png)
 
 ## Installation
 
@@ -77,7 +73,7 @@ This architecture ensures that each aspect of the debate (research, visuals, and
 
 4. Click "Fight!!!" to generate comprehensive research and debates
 
-5. Explore the results in the three tabs:
+5. Explore the research in the three tabs:
    - **For Stance**: Essay supporting the position
    - **Against Stance**: Essay opposing the position
    - **Podcast**: Interactive script and audio recording
