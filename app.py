@@ -19,7 +19,7 @@ with st.sidebar:
     st.markdown("# For My Wife 👩💚")
     
     # Add the wife_thinking.png image to the sidebar
-    st.image("wife_thinking.png", caption="My wife thinking about decisions", use_column_width=True)
+    st.image("wife_thinking.png", caption="My wife thinking about decisions", use_container_width=True)
     
     # Put the "How it works" section inside a toggle
     with st.expander("ℹ️ How it works", expanded=False):
