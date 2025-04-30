@@ -65,7 +65,7 @@ Write only the DALL-E prompt, no other text.'''
         model="dall-e-3",
         prompt=draw_prompt,
         size="1024x1024",
-        quality="high",
+        quality="hd",
         n=1
     )
 
