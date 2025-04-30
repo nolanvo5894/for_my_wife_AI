@@ -33,14 +33,15 @@ The application follows a multi-agent architecture where different AI agents col
    - The materials are then distributed to two specialized research agents:
      - FOR stance research agent with its own detailed web research
      - AGAINST stance research agent with its own detailed web research
-   - Both agents contribute to creating the debate content
+   - Both agents write research essays for their argument for display and contribute to creating the debate content
 
 2. **Content Generation Flow**:
-   - The debate content feeds into two parallel processes:
-     - **Visual Track**: An illustrator agent creates a custom illustration for the debate
-     - **Audio Track**: 
+   - The debate content feeds into the audio generation process:
        - A writer agent creates structured debate scripts with MODERATOR, MR. YES, and MS. NO.
        - Voice agents convert the scripts into audio using different voices for each role
+
+3. **Illustration Flow**: 
+   - An illustrator agent is given the topic of the debate and creates a custom illustration for the debate in parallel with the research and content generation flow.
 
 This architecture ensures that each aspect of the debate (research, visuals, and audio) is handled by specialized agents, resulting in high-quality, well-researched, and engaging content.
 
