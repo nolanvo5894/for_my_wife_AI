@@ -96,6 +96,7 @@ for_my_wife/
 ├── podcast_script_generator.py  # Script generation
 ├── podcast_audio_recorder.py    # Audio recording
 ├── debate_illustrator.py        # Illustration generation
+├── samples/                # Sample debate podcasts and outputs
 ├── requirements.txt        # Python dependencies
 └── README.md              # This file
 ```
