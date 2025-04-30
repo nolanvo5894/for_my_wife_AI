@@ -44,17 +44,13 @@ Topic being debated: {topic}
 
 Required elements:
 1. A professional male moderator in the center
-2. A male debater on one side (for stance)
-3. A female debater on the other side (against stance)
+2. A male debater named MR. YES on one side (for stance)
+3. A female debater named MS. NO on the other side (against stance)
 4. Modern debate stage or studio setting
-5. Professional attire for all participants
-6. Visual elements that represent the debate topic
+5. Visual elements that represent the debate topic
 
 Style requirements:
-- Modern anime art style
-- Professional and sophisticated atmosphere
-- Clean, well-lit environment
-- Dynamic camera angle
+- Watercolor cartoon anime art style
 - High detail on facial expressions showing engagement
 
 Write only the DALL-E prompt, no other text.'''
@@ -69,7 +65,7 @@ Write only the DALL-E prompt, no other text.'''
         model="dall-e-3",
         prompt=draw_prompt,
         size="1024x1024",
-        quality="standard",
+        quality="high",
         n=1
     )
 
