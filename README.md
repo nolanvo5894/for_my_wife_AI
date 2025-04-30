@@ -131,12 +131,13 @@ for_my_wife/
 
 ## Vision and Future
 
-This app is not just a fun app, it is a step towards broadly capable AI systems not merely providing us with information, but guiding us to informed decisions. This system adapts to any domain, be it PERSONAL FINANCE, LIFESTYLE, EDUCATION, MARKETING, TECHNOLOGY. It could be used to assist not just personal, but professional use cases.
+This app is not just a fun app, it is a step towards broadly capable AI systems not merely providing us with information, but guiding us to informed decisions. This system adapts to any domain, be it PERSONAL FINANCE, LIFESTYLE, EDUCATION, MARKETING, TECHNOLOGY, and so on. It could be used to assist not just personal, but professional use cases.
 
-There are several next steps I have for this app, including 
-- personalisation with user chat history and preferences, and 
-- directly immersing the user into the debate.  
-- a panel of multiple AI experts instead of just 2 AI researchers. 
+There are several next steps I have for this app, including:
+- Personalisation with user chat history and preferences.
+- Directly immersing the user into the debate.  
+- A panel of multiple AI experts instead of just 2 AI researchers.
+
 There are endless opportunities.
 
 ## Contact

@@ -116,12 +116,12 @@ if generate_button:
                     st.markdown(f"{i}. {url}")
             
             with tab3:
-                st.markdown("## 🎧 Debate Audio")
+                st.markdown("## 🎧 Podcast Audio")
                 with open(audio_path, "rb") as f:
                     audio_bytes = f.read()
                 st.audio(audio_bytes, format="audio/wav")
                 
-                st.markdown("## 📜 Debate Script")
+                st.markdown("## 📜 Podcast Script")
                 for entry in script_data["dialogue"]:
                     st.markdown(f"**[{entry['role']}]**: {entry['text']}")
                 
