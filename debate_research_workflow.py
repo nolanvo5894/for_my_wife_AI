@@ -73,16 +73,35 @@ class DebateResearchWorkflow(Workflow):
 
         # Use LLM to identify the stances
         llm = AzureOpenAI(
-            engine="o3-mini",
-            model="o3-mini",
+            engine="gpt-4o",
+            model="gpt-4o",
             temperature=0.3
         )
-        sllm = llm.as_structured_llm(output_cls=Stances)
-        input_msg = ChatMessage.from_str(f'''Given this debate topic '{topic}' and these initial materials: {source_materials}
-                                        Generate two clear opposing stances - one for and one against the topic.
-                                        Each stance should be a clear position statement, not longer than 15 words.''')
-        response = sllm.chat([input_msg])
-        stances = json.loads(response.message.content)
+        prompt = f'''Given this debate topic '{topic}' and these initial materials: {source_materials}
+                    Generate two clear opposing stances - one for and one against the topic.
+                    Each stance should be a clear position statement, not longer than 15 words.
+                    
+                    IMPORTANT: Return ONLY a valid JSON object in this exact format, with no additional text:
+                    {{
+                        "stance_for": "your for stance here",
+                        "stance_against": "your against stance here"
+                    }}'''
+        
+        response = llm.complete(prompt)
+        try:
+            stances = json.loads(response.text)
+        except json.JSONDecodeError:
+            # If JSON parsing fails, try to extract the JSON part from the response
+            import re
+            json_match = re.search(r'\{.*\}', response.text, re.DOTALL)
+            if json_match:
+                stances = json.loads(json_match.group(0))
+            else:
+                # If we can't extract JSON, create a default response
+                stances = {
+                    "stance_for": "Supporting the topic",
+                    "stance_against": "Opposing the topic"
+                }
         
         # Send events for both stances
         ctx.send_event(StancePackage(stance=stances["stance_for"], stance_type="for"))
