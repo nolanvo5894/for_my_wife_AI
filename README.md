@@ -39,7 +39,7 @@ The application follows a multi-agent architecture where different AI agents col
    - The debate content feeds into two parallel processes:
      - **Visual Track**: An illustrator agent creates a custom illustration for the debate
      - **Audio Track**: 
-       - A writer agent creates structured debate scripts
+       - A writer agent creates structured debate scripts with MODERATOR, MR. YES, and MS. NO.
        - Voice agents convert the scripts into audio using different voices for each role
 
 This architecture ensures that each aspect of the debate (research, visuals, and audio) is handled by specialized agents, resulting in high-quality, well-researched, and engaging content.
