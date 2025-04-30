@@ -32,8 +32,8 @@ class PodcastScriptGenerator:
 
                     Create a natural dialogue between three roles:
                     [MODERATOR]: Guides discussion, asks questions, maintains balance
-                    [FOR DEBATOR]: Presents arguments for the topic
-                    [AGAINST DEBATOR]: Presents arguments against the topic
+                    [MR. YES]: Presents arguments for the topic with confidence and enthusiasm
+                    [MS. NO]: Presents arguments against the topic with skepticism and wit
 
                     The script should follow this structure:
 
@@ -45,9 +45,9 @@ class PodcastScriptGenerator:
                     2. Main Discussion (3 rounds)
                     For each key point:
                     - [MODERATOR] introduces the subtopic
-                    - [FOR DEBATOR] presents argument
-                    - [AGAINST DEBATOR] responds
-                    - Allow brief back-and-forth
+                    - [MR. YES] presents argument with conviction and passion
+                    - [MS. NO] responds with skepticism and clever counterpoints
+                    - Allow brief back-and-forth with some friendly banter
                     - [MODERATOR] summarizes and transitions
 
                     3. Counter-Arguments Section
@@ -61,11 +61,14 @@ class PodcastScriptGenerator:
 
                     IMPORTANT: Format your response EXACTLY like this example:
                     [MODERATOR]: Welcome to today's debate on...
-                    [FOR DEBATOR]: Thank you. I believe that...
-                    [AGAINST DEBATOR]: I appreciate the opportunity to...
+                    [MR. YES]: Thank you. I believe that...
+                    [MS. NO]: I appreciate the opportunity to...
                     
                     Keep each line under 50 words for better TTS processing.
                     Use natural, conversational language while maintaining professionalism.
+                    Add some attitude and spiciness to MR. YES and MS. NO's dialogue - they should have distinct personalities:
+                    - MR. YES should be enthusiastic, optimistic, and sometimes a bit over-the-top in his support
+                    - MS. NO should be skeptical, witty, and occasionally sarcastic in her opposition
                     Make sure to include all sections of the debate structure.'''
 
         response = await self.llm.acomplete(prompt)
@@ -83,12 +86,12 @@ class PodcastScriptGenerator:
             if '[MODERATOR]:' in line:
                 role = 'MODERATOR'
                 text = line.split('[MODERATOR]:')[1].strip()
-            elif '[FOR DEBATOR]:' in line:
-                role = 'FOR DEBATOR'
-                text = line.split('[FOR DEBATOR]:')[1].strip()
-            elif '[AGAINST DEBATOR]:' in line:
-                role = 'AGAINST DEBATOR'
-                text = line.split('[AGAINST DEBATOR]:')[1].strip()
+            elif '[MR. YES]:' in line:
+                role = 'MR. YES'
+                text = line.split('[MR. YES]:')[1].strip()
+            elif '[MS. NO]:' in line:
+                role = 'MS. NO'
+                text = line.split('[MS. NO]:')[1].strip()
             else:
                 continue
                 
@@ -110,8 +113,8 @@ class PodcastScriptGenerator:
             "dialogue": script,
             "voices": {
                 "MODERATOR": "en-US-GuyNeural",
-                "FOR DEBATOR": "en-US-TonyNeural",
-                "AGAINST DEBATOR": "en-US-JennyNeural"
+                "MR. YES": "en-US-TonyNeural",
+                "MS. NO": "en-US-JennyNeural"
             }
         }
         
