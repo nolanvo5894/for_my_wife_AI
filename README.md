@@ -2,13 +2,15 @@
 
 🔗 **Try it out**: [https://formywife.streamlit.app/](https://formywife.streamlit.app/)
 
+### There are also a sample debate podcast file inside the 'samples' folder
+
 ![App Screenshot](app_screenshot.png)
 
 ## Overview
 
 My wife takes a long time before making any life decisions, whether it is to try on new diet or to get a new pair of shoes. Thorough research is a must and hasty impulsive purchases are not tolerated. I know she is not alone.
 
-**For My Wife** is a multi-agentic research system designed to help my wife (or anyone else) gain multifaceted insights and make informed decisions on any topic. The app uses AI to generate comprehensive debates between AI researchers, providing balanced perspectives on any subject matter. This debate format is intended to deliver the researched insights in an engaging and memorable manner to people who enjoy watching dramas like my wife (I mean the users).
+**For My Wife** is a multi-agentic research system designed to help ANYONE gain multifaceted insights and make informed decisions on ANY TOPICS, be it personal matters like e-commerce spending or lifestyle choices, to professional ones like marketing strategies for a new customer segment. The app uses AI to generate COMPREHENSIVE DEBATES between AI researchers, providing balanced perspectives on any subject matter. This debate format is intended to deliver the researched insights in an engaging and memorable manner to people who enjoy watching dramas like my wife.
 
 This project was created to save time on research when making decisions, offering a comprehensive understanding of topics through deep research, structured debates, visual illustrations, and audio presentations.
 
