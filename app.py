@@ -49,7 +49,7 @@ st.markdown('''**For My Wife** is a multi-agentic research system designed to he
 # Input section
 
 # Input section
-topic = st.text_input("🔍 Enter a Research Topic for Debate:", "Should I follow the keto diet?")
+topic = st.text_input("🔍 Enter a Research Topic for Debate:", "Should I buy the new Nintendo Switch 2?")
 generate_button = st.button("Fight!!! 🥊", use_container_width=True)
 
 # Create status containers
