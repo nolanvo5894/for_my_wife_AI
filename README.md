@@ -1,4 +1,4 @@
-# For My Wife 💝
+# For My Wife 👩💚
 
 🔗 **Try it out**: [https://formywife.streamlit.app/](https://formywife.streamlit.app/)
 
