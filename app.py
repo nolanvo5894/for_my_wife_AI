@@ -92,7 +92,7 @@ if generate_button:
             for_essay=result["for"]["essay"],
             against_essay=result["against"]["essay"]
         ))
-        update_status("✅ Podcast script generated")
+        update_status("✅ Debate script generated")
         
         update_status("🎙 Generating audio recording...")
         recorder = PodcastAudioRecorder()
@@ -116,12 +116,12 @@ if generate_button:
                     st.markdown(f"{i}. {url}")
             
             with tab3:
-                st.markdown("## 🎧 Podcast Audio")
+                st.markdown("## 🎧 Debate Audio")
                 with open(audio_path, "rb") as f:
                     audio_bytes = f.read()
                 st.audio(audio_bytes, format="audio/wav")
                 
-                st.markdown("## 📜 Podcast Script")
+                st.markdown("## 📜 Debate Script")
                 for entry in script_data["dialogue"]:
                     st.markdown(f"**[{entry['role']}]**: {entry['text']}")
                 
@@ -131,7 +131,7 @@ if generate_button:
                     st.download_button(
                         label="📄 Download Script (JSON)",
                         data=script_data["dialogue"].__str__(),
-                        file_name=f"{topic.replace(' ', '_').lower()}_podcast_script.json",
+                        file_name=f"{topic.replace(' ', '_').lower()}_debate_script.json",
                         mime="application/json"
                     )
                 with col2:
@@ -139,7 +139,7 @@ if generate_button:
                         st.download_button(
                             label="🎵 Download Audio (WAV)",
                             data=f,
-                            file_name=f"{topic.replace(' ', '_').lower()}_podcast.wav",
+                            file_name=f"{topic.replace(' ', '_').lower()}_debate.wav",
                             mime="audio/wav"
                         )
                 with col3:
