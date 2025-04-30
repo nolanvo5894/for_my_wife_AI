@@ -67,6 +67,34 @@ illustration_placeholder = st.empty()
 # Create placeholder for tabs
 tabs_placeholder = st.empty()
 
+# Define the download fragment
+@st.fragment
+def download_section(script_data, audio_path, illustration_path, topic):
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.download_button(
+            label="📄 Download Script (JSON)",
+            data=script_data["dialogue"].__str__(),
+            file_name=f"{topic.replace(' ', '_').lower()}_debate_script.json",
+            mime="application/json"
+        )
+    with col2:
+        with open(audio_path, "rb") as f:
+            st.download_button(
+                label="🎵 Download Audio (WAV)",
+                data=f,
+                file_name=f"{topic.replace(' ', '_').lower()}_debate.wav",
+                mime="audio/wav"
+            )
+    with col3:
+        with open(illustration_path, "rb") as f:
+            st.download_button(
+                label="🖼️ Download Illustration (PNG)",
+                data=f,
+                file_name=f"{topic.replace(' ', '_').lower()}_illustration.png",
+                mime="image/png"
+            )
+
 if generate_button:
     try:
         # First generate the research to get stance summaries
@@ -125,31 +153,9 @@ if generate_button:
                 for entry in script_data["dialogue"]:
                     st.markdown(f"**[{entry['role']}]**: {entry['text']}")
                 
-                # Download buttons
-                col1, col2, col3 = st.columns(3)
-                with col1:
-                    st.download_button(
-                        label="📄 Download Script (JSON)",
-                        data=script_data["dialogue"].__str__(),
-                        file_name=f"{topic.replace(' ', '_').lower()}_debate_script.json",
-                        mime="application/json"
-                    )
-                with col2:
-                    with open(audio_path, "rb") as f:
-                        st.download_button(
-                            label="🎵 Download Audio (WAV)",
-                            data=f,
-                            file_name=f"{topic.replace(' ', '_').lower()}_debate.wav",
-                            mime="audio/wav"
-                        )
-                with col3:
-                    with open(illustration_path, "rb") as f:
-                        st.download_button(
-                            label="🖼️ Download Illustration (PNG)",
-                            data=f,
-                            file_name=f"{topic.replace(' ', '_').lower()}_illustration.png",
-                            mime="image/png"
-                        )
+                # Use the fragment for downloads
+                st.markdown("## 📥 Downloads")
+                download_section(script_data, audio_path, illustration_path, topic)
         
         update_status("✨ All processing complete!")
         
