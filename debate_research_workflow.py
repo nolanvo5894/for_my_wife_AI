@@ -73,20 +73,14 @@ class DebateResearchWorkflow(Workflow):
 
         # Use LLM to identify the stances
         llm = AzureOpenAI(
-            engine="gpt-4o",
-            model="gpt-4o",
+            engine="o3-mini",
+            model="o3-mini",
             temperature=0.3
         )
         sllm = llm.as_structured_llm(output_cls=Stances)
-        prompt = f'''Given this debate topic {topic} and these initial materials: {source_materials}
-                    Generate two clear opposing stances - one for and one against the topic.
-                    Each stance should be a clear position statement, not longer than 15 words.
-                    Return the response in this exact JSON format:
-                    {{
-                        "stance_for": "your for stance here",
-                        "stance_against": "your against stance here"
-                    }}'''
-        input_msg = ChatMessage.from_str(prompt)
+        input_msg = ChatMessage.from_str(f'''Given this debate topic '{topic}' and these initial materials: {source_materials}
+                                        Generate two clear opposing stances - one for and one against the topic.
+                                        Each stance should be a clear position statement, not longer than 15 words.''')
         response = sllm.chat([input_msg])
         stances = json.loads(response.message.content)
         
