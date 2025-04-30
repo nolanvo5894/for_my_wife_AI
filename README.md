@@ -123,14 +123,17 @@ for_my_wife/
 - **tenacity**: Retry library for handling transient failures in API calls
 
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Acknowledgments
 
 - Created with love to help make informed decisions easier
 - Inspired by the need to save time on research for decision-making
+
+
+## Vision and Future
+
+To conclude, I want to emphasize that I believe this app is not just a fun app, it is a step towards broadly capable AI systems not merely providing us with information, but guiding us to informed decisions. This system adapts to any domain, be it PERSONAL FINANCE, LIFESTYLE, EDUCATION, MARKETING, TECHNOLOGY. It could be used to assist not just personal, but professional use cases. 
+
+There are several next steps I have for this app, including personalisation with user chat history and preferences, and directly immersing the user into the debate. There may even be more than two researchers, but a panel of multiple AI experts. There are endless opportunities.
 
 ## Contact
 
