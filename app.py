@@ -43,7 +43,7 @@ with st.sidebar:
         """)
 
 st.title("For My Wife 👩💚")
-st.write("### 🤖🧑‍🔬️ AI researchers fight to help my wife (and you) making informed decisions on any topic")
+st.write("### 🤖🧑‍🏫️ AI researchers fight to help my wife (and you) making informed decisions on any topic")
 st.markdown("My wife takes a long time before making any life decisions, whether it is to try on new diet or to get a new pair of shoes. Thorough research is a must and hasty impulsive purchases are not tolerated. I know she is not alone.")
 st.markdown('''**For My Wife** is a multi-agentic research system designed to help my wife (or anyone else) gain multifaceted insights and make informed decisions on any topic. The app uses AI to generate comprehensive debates between AI researchers, providing balanced perspectives on any subject matter. This debate format is intended to deliver the researched insights in an engaging and memorable manner to people who enjoy watching dramas like my wife (I mean the users).''')
 # Input section
